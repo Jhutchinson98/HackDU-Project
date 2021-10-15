@@ -1,5 +1,6 @@
 :root{
     --background-color:aliceblue;
+    --background-gradient: linear-gradient(rgb(5,253,173) 10%,rgb(115,189,221));
 }
 
 .pageBackground{
@@ -9,7 +10,7 @@
 
 header.header{
 	color: white;
-	background-color: #3D6271;
+    background-image: linear-gradient(rgb(5,253,173) 20%,rgb(115,189,221));
 	margin: 0px;
 	padding: 0.1em 0.5em 0.1em 0.5em;
     text-align: right;
@@ -17,7 +18,8 @@ header.header{
 
 footer.footer{
 	color: white;
-	background-color: #3D6271;
+	/*background-color: #3D6271;*/
+    background-image: linear-gradient(rgb(5,253,173) 20%,rgb(115,189,221));
 	margin: 0px;
 	padding: 0.1em 0.5em 0.1em 0.5em;
     text-align: left;
@@ -41,13 +43,21 @@ footer.footer{
 }
 
 div.banner{
-    background-color: lightgreen;
+    background-image: linear-gradient(to right,rgb(5,253,173) 20%,rgb(115,189,221));
     height: 240px;
     margin-left: 0px;
     margin-right: 0px;
 }
 
 .aboutUsContent{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+.homeContent{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
