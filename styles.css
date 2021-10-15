@@ -33,13 +33,16 @@ footer.footer{
 .button {
     background-color: #8fd4eb;
     border-radius: 10px;
-    color: lightgrey;
     padding: 20px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 18px;
+}
 
+div.buttonDiv{
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
 }
 
 div.banner{
@@ -55,6 +58,7 @@ div.banner{
     font-size: 24px;
     padding: 0px 0px 0px 10px;
     margin: 0px 0px 0px 0px;
+    flex:0 1 50%;
 }
 
 .homeContent{
@@ -63,5 +67,11 @@ div.banner{
     font-size: 24px;
     padding: 0px 0px 0px 10px;
     margin: 0px 0px 0px 0px;
+}
+
+div.lowerDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
