@@ -5,3 +5,7 @@
 .pageBackground{
     background-color: var(--background-color);
 }
+
+.titleBackground{
+    background-image: linear-gradient(blue, green );
+}
