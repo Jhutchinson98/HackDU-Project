@@ -1,6 +1,7 @@
 :root{
     --background-color:aliceblue;
     --background-gradient: linear-gradient(rgb(5,253,173) 10%,rgb(115,189,221));
+    --background-image: 
 }
 
 .pageBackground{
@@ -40,6 +41,15 @@ footer.footer{
     font-size: 18px;
 }
 
+
+.button:hover, .cancelButton:hover, .nextButton:hover, .previousButton:hover {
+    background-color: rgb(115,189,221);
+    cursor: pointer;
+}
+
+
+
+
 div.buttonDiv{
     flex: 0 1 50%;
     display: flex;
@@ -47,7 +57,7 @@ div.buttonDiv{
 }
 
 div.banner{
-    background-image: linear-gradient(to right,rgb(5,253,173) 20%,rgb(115,189,221));
+    background-image: url('healthbanner.png');
     height: 240px;
     margin-left: 0px;
     margin-right: 0px;
@@ -98,8 +108,17 @@ div.lowerDiv{
     float: right;
 }
 
-.nextButton:hover{
-    cursor: pointer;
+.previousButton {
+    background-color: #8fd4eb;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    top: 20px;
+    left: 1020px;
 }
 
 div#form2{
