@@ -178,9 +178,10 @@ function domLoaded() {
             surveyResults.innerHTML += "<br>";
         }
         if(familyDepression == "Yes"){
-            surveyResults.innerHTML += "-If you have been diagnosed with Depression, reach out to people who can help.";
+            surveyResults.innerHTML += "-If you have been diagnosed with depression, reach out to people who can help.";
+            surveyResults.innerHTML += "<br>";
             surveyResults.innerHTML += "National Suicide Prevention Lifeline: 800-273-8255";
-            surveyResults.innerHTML += "-Talk to somebody fam!";
+            surveyResults.innerHTML += "<br>";
 
         }
     }
