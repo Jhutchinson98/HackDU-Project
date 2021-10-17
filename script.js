@@ -12,10 +12,12 @@ function domLoaded() {
     age = document.getElementById("age");
     smoking = document.getElementById("smoking");
     drinking = document.getElementById("drinking");
+    exercise = document.getElementById("exercise");
 
     //form 2 survey answers
     familyCancer = document.getElementById("familyCancer");
     highBP = document.getElementById("familyBlood")
+    depression = document.getElementById("depression");
 
     //buttons
     next1 = document.getElementById("next1");
@@ -27,6 +29,7 @@ function domLoaded() {
         sexValue = sex.value;
         smokingValue = smoking.value;
         drinkingValue = drinking.value;
+        exerciseValue = exercise.value;
 
         //hide this form and show next
         form1.style.display = "none";
@@ -37,6 +40,7 @@ function domLoaded() {
         //get all values from form elements
         familyCancerValue = familyCancer.value;
         familyBloodPressure = highBP.value;
+        familyDepression = depression.value;
 
         //check all answers from survey
         checkAnswers();
@@ -89,33 +93,68 @@ function domLoaded() {
             surveyResults.innerHTML += " ";
             surveyResults.innerHTML += " ";
             surveyResults.innerHTML += " ";
+            if(ageValue == "20-24" || ageValue == "25-29" || ageValue == "30-34" || ageValue == "35-39"){
+                surveyResults.innerHTML += "-Females between ages 20 and 39 hould get their blood pressure checked at least once every 2 years.";
+                surveyResults.innerHTML += "<br>";
+                surveyResults.innerHTML += "<br>";
+            }
+
+            if(ageValue == "40-44" || ageValue == "45-49" || ageValue == "50-54" || ageValue == "55-59" || ageValue == "60+"){
+                surveyResults.innerHTML += "-Females over the age of 40 should get thei blood pressure checked at least once every year.";
+                surveyResults.innerHTML += "<br>";
+                surveyResults.innerHTML += "<br>";
+            }
         
             if(ageValue == "40-44" || ageValue == "45-49" || ageValue == "50-54" || ageValue == "55-59" || ageValue == "60+"){
                 surveyResults.innerHTML += "-As a female over 40 you should start getting annual mammograms.";
+                surveyResults.innerHTML += "<br>";
                 surveyResults.innerHTML += "<br>"; 
-                surveyResults.innerHTML += "Females ages 30 and over should have testing for the human papillomavirus (HPV) with their Pap smear.";
+                surveyResults.innerHTML += "-Woman ages 30 and over should have testing for the human papillomavirus (HPV) with their Pap smear.";
+                surveyResults.innerHTML += "<br>";
                 surveyResults.innerHTML += "<br>"; 
             }
+            
             if(ageValue =="18-24" || ageValue== "25-29" || familyCancer == "yes"){
-               surveyResults.innerHTML += "Females at the age of 21 should start Pap smear screening "; 
+               surveyResults.innerHTML += "-Females at the age of 21 should start Pap smear screening "; 
                surveyResults.innerHTML += "<br>";
-               surveyResults.innerHTML += "Between the ages of 21-29, women whose Pap smears are normal only need it repeated every three years."
+               surveyResults.innerHTML += "<br>";
+               surveyResults.innerHTML += "-Between the ages of 21-29, women whose Pap smears are normal only need it repeated every three years."
+               surveyResults.innerHTML += "<br>";
                surveyResults.innerHTML += "<br>"; 
             }
+            
             if(ageValue == "30-34" || ageValue == "35-39"){
                 surveyResults.innerHTML += "Females ages 30 and over should have testing for the human papillomavirus (HPV) with their Pap smear.";  
                 surveyResults.innerHTML += "<br>"; 
+                surveyResults.innerHTML += "<br>";
             }
+            
             if(ageValue == "45-49" || ageValue == "50-54" || ageValue == "55-59" || ageValue == "60+"){
                 surveyResults.innerHTML += "Recommended starting age for cholesterol screening is age 45.";
-                surveyResults.innerHTML += "<br>"; 
+                surveyResults.innerHTML += "<br>";
+                surveyResults.innerHTML += "<br>";
                 surveyResults.innerHTML += "Females over the age of 45 should be screened for colorectal cancer.";
+                surveyResults.innerHTML += "<br>";
                 surveyResults.innerHTML += "<br>"; 
             }
+
+            if(ageValue == "60+"){
+                surveyResults.innerHTML += "-Women over the age of 60 should get screened for osteoporosis via bone density tests";
+                surveyResults.innerHTML += "<br>";
+                surveyResults.innerHTML += "<br>";
+            }
+        }
+
+        if(exerciseValue == "Less Than 2"){
+            surveyResults.innerHTML += "-It is recommended you exercise more, as this will help prevent many heart issues as well as prevent obesity ";
+            surveyResults.innerHTML += "and obesity related issues.";
+            surveyResults.innerHTML += "<br>";
+            surveyResults.innerHTML += "<br>";
         }
         
         if(familyCancerValue == "Yes"){
             surveyResults.innerHTML += "-If your family has a history of certain cancers, it is recomended to get a screening for those cancers.";
+            surveyResults.innerHTML += "<br>";
             surveyResults.innerHTML += "<br>";
         }
 
@@ -137,6 +176,12 @@ function domLoaded() {
             surveyResults.innerHTML += "--Cancer of the breast, mouth, throat, esophagus, voice box, liver, colon, and rectum.";
             surveyResults.innerHTML += "<br>";
             surveyResults.innerHTML += "<br>";
+        }
+        if(familyDepression == "Yes"){
+            surveyResults.innerHTML += "-If you have been diagnosed with Depression, reach out to people who can help.";
+            surveyResults.innerHTML += "National Suicide Prevention Lifeline: 800-273-8255";
+            surveyResults.innerHTML += "-Talk to somebody fam!";
+
         }
     }
 }
